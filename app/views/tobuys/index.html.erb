@@ -1,0 +1,9 @@
+<h1>Things to buy</h2>
+  <ol><% @tobuys.each do |tobuy| %>
+    <li style="list-style:none;" id="<%= dom_id(tobuy) %>"><h2><%= tobuy.quantity %>x</h2><span style="margin-left:30px;"><%= tobuy.name %></span>
+      <p><%= link_to "Delete", tobuy_path(tobuy), remote: true, method: :delete%></p>
+  	</li>
+  <% end %>
+  </ol>
+
+  <h5><%= link_to "Add new thing to buy", new_tobuy_path %></h5>

@@ -1,0 +1,7 @@
+<form action="index">
+   <input type="text" id='city-input' class="form-control" name="city" placeholder="Enter city" aria-describedby="basic-addon2">
+ <input type="submit" id="submit-city" class="btn btn-default" value="Submit">
+</form>
+
+<div class="city-name"><%= @weather.name %></div>
+<div class="city-temp"><span> <%= @weather.temp.round %> °C</span></div><br>

@@ -1,0 +1,12 @@
+<h2>Todos</h2>
+<ol><% @todos.each do |todo| %>
+  <li id="<%= dom_id(todo) %>"><h2><%= todo.title %></h2>
+    <ol>
+      <h3><li id="<%= dom_id(todo) %>"><span><%= todo.content %></span></h3></li>
+  </ol>
+    <p><%= link_to "Delete", todo_path(todo), remote: true, method: :delete%></p>
+	</li>
+<% end %>
+</ol>
+
+<h5><%= link_to "Make new todo thing", new_todo_path %></h5>

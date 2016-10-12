@@ -1,0 +1,2 @@
+class Tobuy < ApplicationRecord
+end
