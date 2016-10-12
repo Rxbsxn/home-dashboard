@@ -36,6 +36,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'pry'
   gem 'rspec-rails'
+  gem 'selleo-controller_tests', git: 'https://github.com/Selleo/selleo-controller_tests.git'
   gem 'rails-controller-testing'
 end
 

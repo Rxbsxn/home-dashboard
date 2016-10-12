@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/Selleo/selleo-controller_tests.git
+  revision: 33c94fd41954661c18ceb4c329320d702b201ef8
+  specs:
+    selleo-controller_tests (0.0.7)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -208,6 +214,7 @@ DEPENDENCIES
   rspec
   rspec-rails
   sass-rails (~> 5.0)
+  selleo-controller_tests!
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
