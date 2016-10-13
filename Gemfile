@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'open-weather'
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'jsonapi-resources'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

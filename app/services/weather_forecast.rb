@@ -9,6 +9,11 @@ class WeatherForecast < OpenWeather::Current
   end
 
   class Info < OpenStruct
+
+    def to_json(_)
+      {temp: temp, b: 2}.to_json
+    end
+
     def temp
       main['temp']
     end
