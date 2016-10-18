@@ -39,6 +39,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'selleo-controller_tests', git: 'https://github.com/Selleo/selleo-controller_tests.git'
   gem 'rails-controller-testing'
+  gem 'factory_girl'
+  gem 'factory_girl_rails'
 end
 
 group :development do
