@@ -1,8 +1,12 @@
+
 <%= stylesheet_link_tag 'tobuy' %>
-<h1>Things to buy</h1>
+
+
+
+<h1>Things to buy</h2>
   <ol><% @tobuys.each do |tobuy| %>
     <li style="list-style:none;" id="<%= dom_id(tobuy) %>"><h2><%= tobuy.quantity %>x</h2><span style="margin-left:30px;"><%= tobuy.name %></span>
-      <p><%= link_to "Delete", tobuy_path(tobuy), remote: true, method: :delete%></p>
+      <p><%= link_to image_tag( "bin.png", :width => "15"), tobuy_path(tobuy), remote: true, method: :delete%></p>
   	</li>
   <% end %>
   </ol>

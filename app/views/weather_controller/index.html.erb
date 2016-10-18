@@ -1,10 +1,5 @@
 <%= stylesheet_link_tag 'weather' %>
 
-<div class="weather-input">
-  <input type="text" id='city-input' class="form-control" name="city" placeholder="Enter city" aria-describedby="basic-addon2">
-  <input type="submit" id="submit-city" class="btn btn-default" value="Submit">
-</div>
-
   <div id="weather">
     <center><h1><%= @weather.name %></h1>
     <img src="cloudy.png" />
@@ -16,4 +11,8 @@
         <h2><%= image_tag( "dawn.png", :width => "25")%> <%= @weather.sunrise.to_s(:time) %></h2>
         <h2><%= image_tag( "sunset.png", :width => "25")%> <%= @weather.sunset.to_s(:time) %></h2>
       </div>
+
     </div>
+         <input type="text" id='city-input' class="form-control" name="city" placeholder="Enter city" aria-describedby="basic-addon2">
+       <input type="submit" id="submit-city" class="btn btn-default" value="Submit">
+</div>
