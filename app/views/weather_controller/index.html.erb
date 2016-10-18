@@ -1,9 +1,4 @@
-<%= form_tag '/weather.json', remote: true, method: :get do %>
-   <input type="text" id='city-input' class="form-control" name="city" placeholder="Enter city" aria-describedby="basic-addon2">
- <input type="submit" id="submit-city" class="btn btn-default" value="Submit">
-<%- end %>
-
-  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
 
   <div id="weather">
     <center><h1><%= @weather.name %></h1>
@@ -16,4 +11,8 @@
         <h2><%= image_tag( "dawn.png", :width => "25")%> <%= @weather.sunrise %></h2>
         <h2><%= image_tag( "sunset.png", :width => "25")%> <%= @weather.sunset %></h2>
       </div>
+      <%= form_tag '/weather.json', remote: true, method: :get do %>
+         <input type="text" id='city-input' class="form-control" name="city" placeholder="Enter city" aria-describedby="basic-addon2">
+       <input type="submit" id="submit-city" class="btn btn-default" value="Submit">
+      <%- end %>
 </div>
