@@ -6,14 +6,14 @@
   <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
 
   <div id="weather">
-    <center><h1>Warsaw</h1>
+    <center><h1><%= @weather.name %></h1>
     <img src="cloudy.png" />
       <div id="desc">
-        <h2><img src="thermometer.png" width="25"><%= @weather.temp %></h2>
-        <h2><img src="barometer.png" width="25"/><%= @weather.pressure %></h2>
-        <h2><img src="wind-sign.png" width="25"/><%= @weather.speed %></h2>
-        <h2><img src="raindrop.png" width="25"/><%= @weather.humidity %></h2>
-        <h2><img src="dawn.png" width="25"/><%= @weather.sunrise %></h2>
-        <h2><img src="sunset.png" width="25"/><%= @weather.sunset %></h2>
+        <h2><%= image_tag( "thermometer.png", :width => "25")%> <%= @weather.temp %> °C</h2>
+        <h2><%= image_tag( "barometer.png", :width => "25")%> <%= @weather.pressure %> hPa</h2>
+        <h2><%= image_tag( "wind-sign.png", :width => "25")%> <%= @weather.speed %> km/h</h2>
+        <h2><%= image_tag( "raindrop.png", :width => "25")%> <%= @weather.humidity %> %</h2>
+        <h2><%= image_tag( "dawn.png", :width => "25")%> <%= @weather.sunrise %></h2>
+        <h2><%= image_tag( "sunset.png", :width => "25")%> <%= @weather.sunset %></h2>
       </div>
 </div>
