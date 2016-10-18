@@ -3,5 +3,17 @@
  <input type="submit" id="submit-city" class="btn btn-default" value="Submit">
 <%- end %>
 
-<div class="city-name"><%= @weather.name %></div>
-<div class="city-temp"><span> <%= @weather.temp.round %> °C</span></div><br>
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+
+  <div id="weather">
+    <center><h1><%= @weather.name %></h1>
+    <img src="cloudy.png" />
+      <div id="desc">
+        <h2><%= image_tag( "thermometer.png", :width => "25")%> <%= @weather.temp %> °C</h2>
+        <h2><%= image_tag( "barometer.png", :width => "25")%> <%= @weather.pressure %> hPa</h2>
+        <h2><%= image_tag( "wind-sign.png", :width => "25")%> <%= @weather.speed %> km/h</h2>
+        <h2><%= image_tag( "raindrop.png", :width => "25")%> <%= @weather.humidity %> %</h2>
+        <h2><%= image_tag( "dawn.png", :width => "25")%> <%= @weather.sunrise %></h2>
+        <h2><%= image_tag( "sunset.png", :width => "25")%> <%= @weather.sunset %></h2>
+      </div>
+</div>

@@ -1,10 +1,27 @@
+
+
+
+<div id="todo">
+  <center><h1>Things to do:</h1>
+    <div id="desc">
+      <ul><% @todos.each do |todo| %>
+      <li id="<%= dom_id(todo) %>"><h2><%= todo.title %> <%= link_to image_tag( "bin.png", :width => "15"), todo_path(todo), remote: true, method: :delete%></h2>
+        <h3><id="<%= dom_id(todo) %>"><span><%= todo.content %></span></h3></li>
+        <% end %>
+    </ul>
+</div>
+  </div>
+
+
+
+
 <h2>Todos</h2>
 <ol><% @todos.each do |todo| %>
   <li id="<%= dom_id(todo) %>"><h2><%= todo.title %></h2>
     <ol>
       <h3><li id="<%= dom_id(todo) %>"><span><%= todo.content %></span></h3></li>
   </ol>
-    <p><%= link_to "Delete", todo_path(todo), remote: true, method: :delete%></p>
+    <%= link_to "bin.png", todo_path(todo), remote: true, method: :delete%>
 	</li>
 <% end %>
 </ol>
