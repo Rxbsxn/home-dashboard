@@ -1,15 +1,14 @@
 <%= stylesheet_link_tag 'todos' %>
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
 
 <div id="todo">
   <center><h1>Things to do:</h1>
     <div id="desc">
       <ul><% @todos.each do |todo| %>
       <li id="<%= dom_id(todo) %>"><h2><%= todo.title %> <%= link_to image_tag( "bin.png", :width => "15"), todo_path(todo), remote: true, method: :delete%></h2>
-        <h3><id="<%= dom_id(todo) %>"><span><%= todo.content %></span></h3></li>
+        <div class="stefan-batory"><h3><id="<%= dom_id(todo) %>"><span><%= todo.content %></span></h3></div></li>
         <% end %>
     </ul>
 </div>
-<br>
-  </div>
-
-<h5><%= link_to image_tag( "clipboard.png", :width => "30"), new_todo_path %></h5>
+  <h1><%= link_to image_tag( "clipboard.png", :width => "64"), new_todo_path %></h1>
+</div>

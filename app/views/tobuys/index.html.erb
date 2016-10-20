@@ -1,14 +1,14 @@
 
 <%= stylesheet_link_tag 'tobuy' %>
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
 
-
-
-<h1>Things to buy</h2>
-  <ol><% @tobuys.each do |tobuy| %>
-    <li style="list-style:none;" id="<%= dom_id(tobuy) %>"><h2><%= tobuy.quantity %>x</h2><span style="margin-left:30px;"><%= tobuy.name %></span>
-      <p><%= link_to image_tag( "bin.png", :width => "15"), tobuy_path(tobuy), remote: true, method: :delete%></p>
-  	</li>
+  <div id="tobuy">
+    <center><h1>Things to buy:</h1>
+      <div id="desc">
+    <ol><% @tobuys.each do |tobuy| %> <li style="list-style:none;" id="<%= dom_id(tobuy) %>"><h2><%= tobuy.quantity %>x<span style="margin-left:30px;"><%= tobuy.name %></span>  <%= link_to image_tag( "bin.png", :width => "15"), tobuy_path(tobuy), remote: true, method: :delete%></h2>
+    </li>
   <% end %>
   </ol>
-
-  <h5><%= link_to "Add new thing to buy", new_tobuy_path %></h5>
+</div>
+  <h1><%= link_to image_tag( "cart.png", :width => "64"), new_tobuy_path %></h1>
+    </div>

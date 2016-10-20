@@ -16,7 +16,7 @@ font-family: 'Dosis', sans-serif;
 
 }
 
-#todo {
+#tobuy {
   color: Black;
    width: 800px;
    height: 800px;
@@ -37,3 +37,16 @@ font-family: 'Dosis', sans-serif;
    max-height: 100%;
    overflow: auto;
 }
+
+#formtobuy {
+   color: Black;
+   text-align: center;
+   width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -100px; /* połowa szerokości */
+    margin-top: -100px;  /* połowa wysokości */
+}
+  
