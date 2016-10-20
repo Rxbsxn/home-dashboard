@@ -5,8 +5,8 @@
     <img src="cloudy.png" />
       <div id="desc">
         <h2><%= image_tag( "thermometer.png", :width => "25")%> <%= @weather.temp.round %> °C</h2>
-        <h2><%= image_tag( "barometer.png", :width => "25")%> <%= @weather.pressure %> hPa</h2>
-        <h2><%= image_tag( "wind-sign.png", :width => "25")%> <%= @weather.speed %> km/h</h2>
+        <h2><%= image_tag( "barometer.png", :width => "25")%> <%= @weather.pressure.round %> hPa</h2>
+        <h2><%= image_tag( "wind-sign.png", :width => "25")%> <%= @weather.speed.round(2) %> km/h</h2>
         <h2><%= image_tag( "raindrop.png", :width => "25")%> <%= @weather.humidity %> %</h2>
         <h2><%= image_tag( "dawn.png", :width => "25")%> <%= @weather.sunrise.to_s(:time) %></h2>
         <h2><%= image_tag( "sunset.png", :width => "25")%> <%= @weather.sunset.to_s(:time) %></h2>
