@@ -6,7 +6,7 @@
     <div id="desc">
       <ul><% @todos.each do |todo| %>
       <li id="<%= dom_id(todo) %>"><h2><%= todo.title %> <%= link_to image_tag( "bin.png", :width => "15"), todo_path(todo), remote: true, method: :delete%></h2>
-        <h3><id="<%= dom_id(todo) %>"><span><%= todo.content %></span></h3></li>
+        <div class="stefan-batory"><h3><id="<%= dom_id(todo) %>"><span><%= todo.content %></span></h3></div></li>
         <% end %>
     </ul>
 </div>

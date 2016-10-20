@@ -3,7 +3,10 @@
 
   <div id="weather">
     <center><h1><%= @weather.name %></h1>
-    <img src="cloudy.png" />
+    <form class="input-city">
+      <input type="text" id='city-input' class="form-control" name="city" placeholder="Enter city" aria-describedby="basic-addon2">
+      <button type="submit" class="btn btn-info baton">Show</button>
+    </form>
       <div id="desc">
         <h2><%= image_tag( "thermometer.png", :width => "25")%> <%= @weather.temp.round %> °C</h2>
         <h2><%= image_tag( "barometer.png", :width => "25")%> <%= @weather.pressure %> hPa</h2>
@@ -12,8 +15,5 @@
         <h2><%= image_tag( "dawn.png", :width => "25")%> <%= @weather.sunrise.to_s(:time) %></h2>
         <h2><%= image_tag( "sunset.png", :width => "25")%> <%= @weather.sunset.to_s(:time) %></h2>
       </div>
-
     </div>
-         <input type="text" id='city-input' class="form-control" name="city" placeholder="Enter city" aria-describedby="basic-addon2">
-       <input type="submit" id="submit-city" class="btn btn-default" value="Submit">
 </div>

@@ -8,9 +8,22 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header magellan">
+      <a class="navbar-brand" href="#">Weather App</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="magellan"><%= link_to 'Weather', weather_path  %></li>
+      <li class="magellan"><%= link_to 'Things to do', todos_path  %></li>
+      <li><%= link_to 'Things to buy', tobuys_path  %></li>
+    </ul>
+  </div>
+</nav>
     <%= yield %>
   </body>
 </html>

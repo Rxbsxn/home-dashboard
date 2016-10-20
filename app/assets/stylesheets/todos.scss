@@ -12,7 +12,7 @@ font-size: 20px
 }
 
 body {
-background-color: #9EFF26;
+background-color: #ff009f;
 font-family: 'Dosis', sans-serif;
 
 }
@@ -37,4 +37,23 @@ font-family: 'Dosis', sans-serif;
    max-width: 100%;
    max-height: 100%;
    overflow: auto;
+}
+
+#formtodo {
+   color: Black;
+   text-align: center;
+   width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -100px; /* połowa szerokości */
+    margin-top: -100px;  /* połowa wysokości */
+}
+
+.stefan-batory {
+margin-left: 15px;
+width: 385px;
+
+
 }

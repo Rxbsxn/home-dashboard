@@ -1,15 +1,17 @@
-<div style="margin-left: 10px;">
+<%= stylesheet_link_tag 'todos' %>
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+
+
+  <div id="formtodo">
 <%= form_for @todo do |f| %>
-<p>
-  <%= f.label :title %><br>
+<h2>  <%= f.label :title %><br>
   <%= f.text_field :title %>
-</p>
-<p>
-  <%= f.label :content %><br>
+</h2>
+<h2>  <%= f.label :content %><br>
   <%= f.text_field :content %>
-</p>
-<p>
-  <%= f.submit %>
-</p>
+</h2>
+<h2>
+  <%= image_submit_tag("blackarrow.png", :width => "30")%>
+</h2>
 <% end %>
 </div>
