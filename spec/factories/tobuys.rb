@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :tobuy do
-    name { "Chemoterapia" }
+    name { "Mleko" }
     quantity { 2 }
   end
 end
